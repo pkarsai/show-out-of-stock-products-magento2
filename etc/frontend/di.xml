@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+    /**
+    * @author     Peter Karsai
+    * @package    Myweb_ShowOutOfStockProducts
+    * @copyright  Copyright (c) 2019 My Web Kft. (http://www.my-web.hu)
+    */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\ConfigurableProduct\Helper\Data"  type="Myweb\ShowOutOfStockProducts\ConfigurableProduct\Helper\Data\Data"/>
+
+	<type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+		<plugin name="ShowOutOfStockProducts" type="Myweb\ShowOutOfStockProducts\Plugin\ShowOutOfStockProductsPlugin" />
+	</type>
+
+    <type name="Magento\ConfigurableProduct\Model\ResourceModel\Attribute\OptionSelectBuilderInterface">
+        <plugin name="Magento_ConfigurableProduct_Plugin_Model_ResourceModel_Attribute_InStockOptionSelectBuilder" disabled="true" />
+        <plugin name="ShowAllProductSwatches" type="Myweb\ShowOutOfStockProducts\Plugin\InStockOptionSelectorPlugin"/>
+    </type>
+</config>

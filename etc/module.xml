@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+    /**
+    * @author     Peter Karsai
+    * @package    Myweb_ShowOutOfStockProducts
+    * @copyright  Copyright (c) 2019 My Web Kft. (http://www.my-web.hu)
+    */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Myweb_ShowOutOfStockProducts" setup_version="1.0" />
+</config>
