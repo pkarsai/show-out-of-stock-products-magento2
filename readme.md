@@ -17,9 +17,13 @@ OR copy the contents of this repo to the following location:
 ```
 {magento_root}/app/code/Myweb/ShowOutOfStockProducts
 ```
+then
+```
+bin/magento setup:upgrade
+```
 
 
-If you are in production mode you also need to run the following:
+If you are in production mode you also need to run the following after installation:
 ```
 bin/magento setup:di:compile
 bin/magento setup:static-content:deploy
